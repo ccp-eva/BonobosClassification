@@ -10,7 +10,6 @@ def main():
     parser = ArgumentParser()
     parser.add_argument(
         'database',
-        default='ROI_S0',
         type=str,
         help='Video folder with category folders. ')
 

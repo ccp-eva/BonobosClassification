@@ -62,17 +62,17 @@ def extract_roi_from_folder_video(category_path, detection_path, output_path, sc
 def main():
     parser = ArgumentParser()
     parser.add_argument(
-        'video_input',
+        '--video_input',
         type=str,
         default='database/videos/',
         help='Video folder with category folders. ')
     parser.add_argument(
-        'detection_input',
+        '--detection_input',
         type=str,
         default='database/detections/',
         help='Json files with the detections.')
     parser.add_argument(
-        'output_folder',
+        '--output_folder',
         type=str,
         default='ROI_S0',
         help='Output where the segmentation will be saved following same tree than the video folder. ')

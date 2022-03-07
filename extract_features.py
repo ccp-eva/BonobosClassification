@@ -14,15 +14,13 @@ def main():
     parser.add_argument(
         'database_path',
         type=str,
-        help='Input where the segmentation will be saved following same tree than the video folder. ')
+        help='Input to compute features.')
     parser.add_argument(
         'database_features',
         type=str,
         help='Output where the features will be saved. ')
     # parser.add_argument(
-    #     '--fixed-size',
-    #     type=str,
-    #     help='Output where the features will be saved. ')
+    #     '--fixed-size',)
 
     print('Initialisation')
     args = parser.parse_args()
