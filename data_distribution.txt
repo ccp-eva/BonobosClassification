@@ -1,0 +1,121 @@
+├── test
+│   ├── Leki
+│   │   ├── Leki_004
+│   │   ├── Leki_011
+│   │   ├── Leki_012
+│   │   ├── Leki_013
+│   │   ├── Leki_027
+│   │   ├── Leki_028
+│   │   ├── Leki_029
+│   │   └── Leki_033
+│   ├── Limbuko
+│   │   ├── Limbuko_003
+│   │   ├── Limbuko_006
+│   │   └── Limbuko_009
+│   ├── Matayo
+│   │   ├── Matayo_001
+│   │   └── Matayo_004
+│   ├── Monyama
+│   │   ├── Monyama_009
+│   │   ├── Monyama_011
+│   │   └── Monyama_012
+│   ├── Opala
+│   │   ├── Opala_007
+│   │   ├── Opala_010
+│   │   ├── Opala_017
+│   │   ├── Opala_021
+│   │   └── Opala_022
+│   └── Santi
+│       ├── Santi_001
+│       └── Santi_002
+├── train
+│   ├── Leki
+│   │   ├── Leki_001
+│   │   ├── Leki_002
+│   │   ├── Leki_005
+│   │   ├── Leki_006
+│   │   ├── Leki_007
+│   │   ├── Leki_008
+│   │   ├── Leki_009
+│   │   ├── Leki_010
+│   │   ├── Leki_014
+│   │   ├── Leki_015
+│   │   ├── Leki_016
+│   │   ├── Leki_017
+│   │   ├── Leki_020
+│   │   ├── Leki_022
+│   │   ├── Leki_023
+│   │   ├── Leki_024
+│   │   ├── Leki_025
+│   │   ├── Leki_026
+│   │   ├── Leki_031
+│   │   ├── Leki_032
+│   │   └── Leki_034
+│   ├── Limbuko
+│   │   ├── Limbuko_001
+│   │   ├── Limbuko_004
+│   │   ├── Limbuko_005
+│   │   ├── Limbuko_007
+│   │   ├── Limbuko_008
+│   │   └── Limbuko_011
+│   ├── Matayo
+│   │   ├── Matayo_002
+│   │   ├── Matayo_003
+│   │   ├── Matayo_005
+│   │   ├── Matayo_006
+│   │   └── Matayo_007
+│   ├── Monyama
+│   │   ├── Monyama_003
+│   │   ├── Monyama_005
+│   │   ├── Monyama_006
+│   │   ├── Monyama_007
+│   │   ├── Monyama_008
+│   │   ├── Monyama_010
+│   │   └── Monyama_013
+│   ├── Opala
+│   │   ├── Opala_001
+│   │   ├── Opala_002
+│   │   ├── Opala_003
+│   │   ├── Opala_004
+│   │   ├── Opala_005
+│   │   ├── Opala_008
+│   │   ├── Opala_011
+│   │   ├── Opala_013
+│   │   ├── Opala_015
+│   │   ├── Opala_018
+│   │   ├── Opala_019
+│   │   ├── Opala_020
+│   │   └── Opala_023
+│   └── Santi
+│       ├── Santi_003
+│       ├── Santi_004
+│       ├── Santi_005
+│       └── Santi_007
+└── validation
+    ├── Leki
+    │   ├── Leki_003
+    │   ├── Leki_018
+    │   ├── Leki_019
+    │   ├── Leki_021
+    │   ├── Leki_030
+    │   ├── Leki_035
+    │   └── Leki_036
+    ├── Limbuko
+    │   ├── Limbuko_002
+    │   └── Limbuko_010
+    ├── Matayo
+    │   ├── Matayo_008
+    │   └── Matayo_009
+    ├── Monyama
+    │   ├── Monyama_001
+    │   ├── Monyama_002
+    │   └── Monyama_004
+    ├── Opala
+    │   ├── Opala_006
+    │   ├── Opala_009
+    │   ├── Opala_012
+    │   ├── Opala_014
+    │   └── Opala_016
+    └── Santi
+        ├── Santi_006
+        └── Santi_008
