@@ -6,6 +6,8 @@ The aim is to have a reproduciable pipeline in order to gbuild a primate identif
 ## Presentation
 The provided dataset was recorded at the Zoo Berlin using a digital camcorder Panasonic HC-V757 and a cheap Logitech webcam, both of resolution 1280x720 at 30 fps. The videos can be assimilated to focal observation consisting of observing one particular individual and observing his/her actions and interactions. This may lead to having several individuals in the field of the camera, or none because of obstruction, camera manipulation, or in the case of not having the individual in the webcam's field of view. No spatial information was annotated, nor is the presence of the individual in the field of the camera if several individuals were in the field of view. In this particular enclosure there are seven individuals  of different gender and age (gender/year of birth): Matayo (male/2019), Monyama (female/2010), Opala (female/1998), Santi (male/1981), Limbuko (male/1995), Leki (female/2014) and Samani female/2020). Samani was not incorporated into the dataset because of her constant proximity with her mother Monyama. A total of 100 videos inequitably distributed across six bonobo individuals is considered. The hand annotation consist of telling on which bonobo the recording is focusing on. The automatic annotation is based on OpenMMLab macaque detector.
 
+![](samples_database.png)
+
 ## Download
 The dataset is available on our nexcloud instance.
 You may download it using your terminal and check its consitency.
