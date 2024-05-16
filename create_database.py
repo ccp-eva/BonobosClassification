@@ -26,7 +26,7 @@ def extract_roi_from_video(video_file, detection_file, output_images, score_thr,
             score = instance_detected['score']
             # If two instances are detected in the same frame, we take the one with the highest score.
             # Not best method when not using ROI
-            # Known issue: the rotation of the video in metadata is not taken into account - lead to error
+            # Known issue: the rotation of the video in metadata is not taken into account - leading to error
             if (not os.path.exists(os.path.join(output_images, '%06d.png' % image_id)) or score > score_last) and score >= score_thr:
                 if no_roi:
                     cv2.imwrite(os.path.join(output_images, '%06d.png' % image_id), frame)
@@ -50,10 +50,10 @@ def extract_roi_from_folder_video(category_path, detection_path, output_path, sc
         # ## For creation of the dataset from Github preparation
         # detection_file = os.path.join(detection_path, os.path.splitext(video)[0] + "_detections.json")
         # category = os.path.basename(category_path)
-        # os.makedirs(os.path.join('database/videos/', category), exist_ok=True)
-        # os.makedirs(os.path.join('database/detections/', category), exist_ok=True)
-        # shutil.copyfile(video_file, os.path.join('database/videos/', category, video))
-        # shutil.copyfile(detection_file, os.path.join('database/detections/', category, os.path.splitext(video)[0] + ".json"))
+        # os.makedirs(os.path.join('data/videos/', category), exist_ok=True)
+        # os.makedirs(os.path.join('data/detections/', category), exist_ok=True)
+        # shutil.copyfile(video_file, os.path.join('data/videos/', category, video))
+        # shutil.copyfile(detection_file, os.path.join('data/detections/', category, os.path.splitext(video)[0] + ".json"))
         # ##
         output_images = os.path.join(output_path, os.path.splitext(video)[0])
         os.makedirs(output_images, exist_ok=True)
@@ -64,18 +64,18 @@ def main():
     parser.add_argument(
         '--video_input',
         type=str,
-        default='database/videos/',
+        default='data/videos/',
         help='Video folder with category folders. ')
     parser.add_argument(
         '--detection_input',
         type=str,
-        default='database/detections/',
+        default='data/detections/',
         help='Json files with the detections.')
     parser.add_argument(
         '--output_folder',
         type=str,
         default='ROI_S0',
-        help='Output where the segmentation will be saved following same tree than the video folder. ')
+        help='Output where the segmentation will be saved following the same tree as the video folder. ')
     parser.add_argument(
         '--score-thr',
         type=float,
@@ -100,7 +100,7 @@ def main():
         os.makedirs(output_path, exist_ok=True)
         extract_roi_from_folder_video(category_path, detection_path, output_path, score_thr=args.score_thr, no_roi=args.no_roi)
 
-    print("Stats on your freasly created dataset")
+    print("Stats on your freshly created dataset")
     total_samples = 0
     for category in list_categories:
         nb_samples = 0
