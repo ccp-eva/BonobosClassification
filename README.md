@@ -123,9 +123,19 @@ Martin, P.-E., Kopp, K., & Haun, D. (2023). Bonobo Dataset (1.0.0) [Data set]. Z
 ```
 ## Software:
 
-
+Pierre-Etienne Martin. (2024). ccp-eva/BonobosClassification: Software (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.xxxxxx
 
 ```
+@software{pierre_etienne_martin_2024_xxxxx,
+  author       = {Pierre-Etienne Martin},
+  title        = {ccp-eva/BonobosClassification: Software},
+  month        = may,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.xxxxxx},
+  url          = {https://doi.org/10.5281/zenodo.xxxxxx}
+}
 ```
 
 Get in touch with us directly if you have any questions: pierre_etienne_martin (at) eva.mpg.de.
