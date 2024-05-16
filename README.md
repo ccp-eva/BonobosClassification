@@ -9,7 +9,7 @@ The provided dataset was recorded at the Zoo Berlin using a digital camcorder Pa
 ![](samples_database.png)
 
 ## Download
-The dataset is available on our Nextcloud instance.
+The dataset is available on a dedicated [Zenodo repository](https://zenodo.org/records/11149418).
 You may download it using your terminal and check its consistency.
 A step-by-step instruction.
 
@@ -19,29 +19,43 @@ git clone https://github.com/ccp-eva/BonobosClassification.git
 cd BonobosClassification
 ```
 
-2. Download the database.zip file from our Nextcloud:
+2. Download the 11149418.zip file from our Zenodo:
 ```
-curl -X GET -u "MBby5AstWe9JiEY:TxsxnWcoEa" -H 'X-Requested-With: XMLHttpRequest' 'https://share.eva.mpg.de/public.php/webdav/database.zip' -o database.zip
+wget --content-disposition https://zenodo.org/api/records/11149418/files-archive
 ```
-Alternatively, you can use your browser using this [link](https://share.eva.mpg.de/index.php/s/MBby5AstWe9JiEY) and this password: TxsxnWcoEa .
+Alternatively, you can use your browser using this [link](https://zenodo.org/api/records/11149418/files-archive).
 
-3. Check its content with md5sum:
+3. Check your download consistency with md5sum:
 ```
-md5sum -c database.md5
-```
-
-4. unzip the file to the database folder:
-```
-unzip -d database database.zip
+md5sum -c 11149418.md5
 ```
 
-You should obtain a database folder with subfolders videos and detections and subsubfolder with the bonobos' name.
+4. unzip the archive:
+```
+unzip 11149418.zip
+```
+
+You should obtain data.zip file, a data.md5sum file and the data agreement under which the data is shared.
+
+5. unzip the data archive:
+```
+unzip data.zip
+```
+
+You should obtain a data folder with subfolders videos and detections, and subsubfolders with the bonobos' name.
+
+6. Check the consistency with md5sum:
+```
+md5sum -c data.md5sum
+```
+
+If all files are ok. You are ready to proceed. If not, the download or unzipping phase should be re-conducted.
 
 ## Datasets generation
 
-Different databases may be generated according to the source files. The script `create_database.py` is meant to create different databases according to the ROI consideration and score threshold. `python3 create_database.py` will create a ROI_S0 database which takes into account the ROI and all frames with bonobos detected regardless of the dtectin score. `python3 create_database.py -h`  for more options.
+Different databases may be generated according to the source files. The script `create_database.py` is meant to create different databases according to the ROI consideration and score threshold. `python3 create_database.py` will create a ROI_S0 database which takes into account the ROI and all frames with bonobos detected regardless of the detection score. `python3 create_database.py -h`  for more options.
 ```
-python3 create_database.py --video_input 'database/videos/ --detection_input database/detections --output_folder ROI_S0 --score-thr 0
+python3 create_database.py --video_input 'data/videos/ --detection_input data/detections --output_folder ROI_S0 --score-thr 0
 ```
 
 Finally, the dataset may be split into the train, validation and test sets using `split_database.py`. The script will create another folder with the name of the database provided + "_split" with the different sets. You may check the distribution used in our work in [data_distribution.txt](data_distribution.txt).
@@ -70,4 +84,48 @@ python3 cnn_classification.py ROI_S0_split
 
 # To cite this work
 
-In pipeline. Get in touch with us directly if you have any questions: pierre_etienne_martin (at) eva.mpg.de.
+## Paper:
+
+Martin, PE. (2024). Dataset Generation and Bonobo Classification from Weakly Labelled Videos. In: Arai, K. (eds) Intelligent Systems and Applications. IntelliSys 2023. Lecture Notes in Networks and Systems, vol 823. Springer, Cham. https://doi.org/10.1007/978-3-031-47724-9_45
+
+```
+@InProceedings{10.1007/978-3-031-47724-9_45,
+  author="Martin, Pierre-Etienne",
+  editor="Arai, Kohei",
+  title="Dataset Generation and Bonobo Classification from Weakly Labelled Videos",
+  booktitle="Intelligent Systems and Applications",
+  year="2024",
+  publisher="Springer Nature Switzerland",
+  address="Cham",
+  pages="689--700",
+  abstract="This paper presents a bonobo detection and classification pipeline built from the commonly used machine learning methods. Such application is motivated by the need to test bonobos in their enclosure using touch screen devices without human assistance. This work introduces a newly acquired dataset based on bonobo recordings generated semi-automatically. The recordings are weakly labelled and fed to a macaque detector in order to spatially detect the individual present in the video. Handcrafted features coupled with different classification algorithms and deep-learning methods using a ResNet architecture are investigated for bonobo identification. Performance is compared in terms of classification accuracy on the splits of the database using different data separation methods. We demonstrate the importance of data preparation and how a wrong data separation can lead to false good results. Finally, after a meaningful separation of the data, the best classification performance is obtained using a fine-tuned ResNet model and reaches 75{\%} of accuracy.",
+  isbn="978-3-031-47724-9"
+}
+```
+
+## Dataset:
+
+Martin, P.-E., Kopp, K., & Haun, D. (2023). Bonobo Dataset (1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.11149418
+
+```
+@dataset{martin_2024_11149418,
+  author       = {Martin, Pierre-Etienne and
+                  Kopp, Kathrin and
+                  Haun, Daniel},
+  title        = {Bonobo Dataset},
+  month        = may,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {1.0.0},
+  doi          = {10.5281/zenodo.11149418},
+  url          = {https://doi.org/10.5281/zenodo.11149418}
+}
+```
+## Software:
+
+
+
+```
+```
+
+Get in touch with us directly if you have any questions: pierre_etienne_martin (at) eva.mpg.de.
