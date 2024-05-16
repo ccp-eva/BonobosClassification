@@ -29,6 +29,7 @@ Alternatively, you can use your browser using this [link](https://zenodo.org/api
 ```
 md5sum -c 11149418.md5
 ```
+If it fails, redo step 2.
 
 4. unzip the archive:
 ```
