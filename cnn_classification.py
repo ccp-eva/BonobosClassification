@@ -71,7 +71,6 @@ def visualize_model(model, save_path, num_images=9, show=False):
                     plt.savefig(save_path, dpi=300, bbox_inches='tight')
                     plt.close('all')
                     return
-        # model.train(mode=was_training)
 
 def test_model(model, criterion, log=None, model_path='model'):
     since = time.time()
