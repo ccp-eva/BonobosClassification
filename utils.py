@@ -8,7 +8,6 @@ import numpy as np
 import sys
 import platform
 import matplotlib
-# To be able to save figure using screen with matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import host_subplot
