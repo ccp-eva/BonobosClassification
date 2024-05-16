@@ -19,7 +19,6 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import MinMaxScaler
 from argparse import ArgumentParser
 
-
 def import_features_label(path_features, path_labels):
     # import the feature vector and labels from the whole dataet
     h5f_features  = h5py.File(path_features, 'r')
